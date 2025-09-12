@@ -1,0 +1,86 @@
+:root {
+    --theme-primary: oklch(0.7 0.1776 51.88);
+    --theme-primary-light: oklch(from var(--theme-primary) 0.9 0.06 h);
+    --theme-text-color-bold: oklch(0 0 0 / 1);
+    --theme-text-color: oklch(0 0 0 / 0.85);
+    --theme-text-color-light: oklch(0 0 0 / 0.7);
+    --theme-border-radius: 6px;
+    --theme-text-margin: 10px;
+    font-family: "Archivo", sans-serif;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+.page__layout {
+    padding: 0;
+}
+.page__header {
+    background-color: var(--theme-primary);
+}
+.page__header__list {
+    margin: 0;
+    padding: 8px;
+    display: flex;
+    gap: 1rem;
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    a {
+        color: var(--theme-text-color-bold);
+        text-decoration: none;
+        transition: color 200ms;
+        &:hover {
+            color: var(--theme-text-color-light);
+        }
+    }
+    .page__header__logo {
+        font-size: 2rem;
+    }
+    li {
+        height: max-content;
+        font-size: 1.5rem;
+        font-weight: 600;
+        display: block;
+    }
+}
+.page__main {
+    max-width: 800px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--theme-primary-light);
+    border-bottom-left-radius: var(--theme-border-radius);
+    border-bottom-right-radius: var(--theme-border-radius);
+}
+.page__content {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: var(--theme-text-margin);
+    padding-bottom: var(--theme-text-margin);
+    h1, h2, h3 {
+        border-bottom-color: oklch(0 0 0 / 0.5);
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        font-family: "Archivo";
+        font-weight: 800;
+        padding-bottom: 2px;
+        margin-top: var(--theme-text-margin);
+        margin-bottom: var(--theme-text-margin);
+    }
+    p {
+        color: var(--theme-text-color);
+        margin-top: var(--theme-text-margin);
+        margin-bottom: var(--theme-text-margin);
+        font-family: "Archivo";
+        line-height: 1.3em;
+    }
+}
+.content__signature {
+    color: var(--theme-text-color-light);
+    padding-left: 2em;
+    font-style: italic;
+}
