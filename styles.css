@@ -33,11 +33,18 @@ html, body {
     margin-left: auto;
     margin-right: auto;
     align-items: center;
-    a {
-        color: var(--theme-text-color-bold);
-    }
     .page__header__logo {
         font-size: 2rem;
+    }
+    a {
+        color: var(--theme-text-color-bold);
+        &:hover {
+            color: var(--theme-primary-dark);
+        }
+    }
+    img {
+        height: 2rem;
+        width: auto;
     }
     li {
         height: max-content;
@@ -82,6 +89,9 @@ html, body {
         margin-bottom: var(--theme-text-margin);
         font-family: "Archivo";
         line-height: 1.3em;
+    }
+    img {
+        max-width: 100%;
     }
 }
 .content__signature {
