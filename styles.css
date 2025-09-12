@@ -8,6 +8,8 @@
     --theme-border-radius: 6px;
     --theme-text-margin: 10px;
     font-family: "Archivo", sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 a {
     text-decoration: none;
@@ -22,6 +24,8 @@ html, body {
 }
 .page__header {
     background-color: var(--theme-primary);
+    position: sticky;
+    top: 0;
 }
 .page__header__list {
     margin: 0;
@@ -61,12 +65,16 @@ html, body {
     background-color: var(--theme-primary-light);
     border-bottom-left-radius: var(--theme-border-radius);
     border-bottom-right-radius: var(--theme-border-radius);
+    &.wide__page {
+        max-width: 1200px;
+    }
 }
 .page__content {
     padding-left: 16px;
     padding-right: 16px;
     padding-top: var(--theme-text-margin);
     padding-bottom: var(--theme-text-margin);
+    margin-bottom: 20px;
     h1, h2, h3 {
         border-bottom-color: oklch(0 0 0 / 0.5);
         border-bottom-width: 1px;
