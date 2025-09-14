@@ -6,8 +6,10 @@
     --theme-text-color: oklch(0 0 0 / 0.85);
     --theme-text-color-light: oklch(0 0 0 / 0.7);
     --theme-border-radius: 6px;
+    --theme-border-color: oklch(0 0 0 / 0.5);
     --theme-text-margin: 10px;
-    font-family: "Archivo", sans-serif;
+    --theme-font: "Archivo", sans-serif;
+    font-family: var(--theme-font);
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -15,8 +17,7 @@ a {
     text-decoration: none;
     transition: color 200ms;
 }
-html, body {
-    padding: 0;
+body {
     margin: 0;
 }
 .page__layout {
@@ -76,10 +77,10 @@ html, body {
     padding-bottom: var(--theme-text-margin);
     margin-bottom: 20px;
     h1, h2, h3 {
-        border-bottom-color: oklch(0 0 0 / 0.5);
+        border-bottom-color: var(--theme-border-color);
         border-bottom-width: 1px;
         border-bottom-style: solid;
-        font-family: "Archivo";
+        font-family: var(--theme-font);
         font-weight: 800;
         padding-bottom: 2px;
         margin-top: var(--theme-text-margin);
@@ -95,7 +96,7 @@ html, body {
         color: var(--theme-text-color);
         margin-top: var(--theme-text-margin);
         margin-bottom: var(--theme-text-margin);
-        font-family: "Archivo";
+        font-family: var(--theme-font);
         line-height: 1.3em;
     }
     img {
@@ -103,7 +104,8 @@ html, body {
     }
 }
 .content__signature {
-    color: var(--theme-text-color-light);
+    /* As bad of a practice it is, color doesn't seem get overrided without !important */
+    color: var(--theme-text-color-light) !important; 
     padding-left: 2em;
     font-style: italic;
 }
