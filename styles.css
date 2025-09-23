@@ -113,3 +113,15 @@ body {
     padding-left: 2em;
     font-style: italic;
 }
+.music__tierlist__columns {
+    display: grid;
+    grid-template-columns: auto minmax(300px, 25%);
+
+    .music__tierlist__left {
+        padding-right: 1em;
+    }
+    .music__tierlist__right {
+        padding-left: 1em;
+        border-left: solid thin var(--theme-border-color);
+    }
+}
