@@ -7,7 +7,10 @@
     --theme-text-color-light: oklch(0 0 0 / 0.7);
     --theme-border-radius: 6px;
     --theme-border-color: oklch(0 0 0 / 0.5);
-    --theme-text-margin: 10px;
+    --theme-text-margin: 0.75rem;
+    --theme-header-margin: 0.4rem;
+    --theme-list-margin: 0.25rem;
+    --theme-page-padding: 1rem;
     --theme-font: "Archivo", sans-serif;
     font-family: var(--theme-font);
     max-width: 100%;
@@ -71,20 +74,21 @@ body {
     }
 }
 .page__content {
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: var(--theme-text-margin);
-    padding-bottom: var(--theme-text-margin);
+    padding-left: var(--theme-page-padding);
+    padding-right: var(--theme-page-padding);
+    padding-top: var(--theme-page-padding);
+    padding-bottom: var(--theme-page-padding);
+    box-sizing: border-box;
     margin-bottom: 20px;
-    h1, h2, h3 {
+    h1, h2, h3, h4, h5, h6 {
         border-bottom-color: var(--theme-border-color);
         border-bottom-width: 1px;
         border-bottom-style: solid;
         font-family: var(--theme-font);
         font-weight: 800;
         padding-bottom: 2px;
-        margin-top: var(--theme-text-margin);
-        margin-bottom: var(--theme-text-margin);
+        margin-top: 0;
+        margin-bottom: var(--theme-header-margin);
     }
     a {
         color: var(--theme-primary);
@@ -94,10 +98,20 @@ body {
     }
     p {
         color: var(--theme-text-color);
-        margin-top: var(--theme-text-margin);
+        margin-top: 0;
         margin-bottom: var(--theme-text-margin);
         font-family: var(--theme-font);
         line-height: 1.3em;
+    }
+    li {
+        color: var(--theme-text-color);
+        margin-top: var(--theme-list-margin);
+        margin-bottom: var(--theme-list-margin);
+        font-family: var(--theme-font);
+        line-height: 1.3em;
+        img {
+            vertical-align: top;
+        }
     }
     img {
         max-width: 100%;
