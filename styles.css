@@ -10,7 +10,7 @@
     --theme-text-margin: 0.75rem;
     --theme-header-margin: 0.4rem;
     --theme-list-margin: 0.25rem;
-    --theme-page-padding: 1rem;
+    --theme-page-padding: 1.5rem;
     --theme-font: "Archivo", sans-serif;
     font-family: var(--theme-font);
     max-width: 100%;
@@ -69,6 +69,7 @@ body {
     background-color: var(--theme-primary-light);
     border-bottom-left-radius: var(--theme-border-radius);
     border-bottom-right-radius: var(--theme-border-radius);
+    transition: width 200ms;
     &.wide__page {
         max-width: 1200px;
     }
@@ -80,13 +81,15 @@ body {
     padding-bottom: var(--theme-page-padding);
     box-sizing: border-box;
     margin-bottom: 20px;
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3 {
         border-bottom-color: var(--theme-border-color);
         border-bottom-width: 1px;
         border-bottom-style: solid;
+        padding-bottom: 2px;
+    }
+    h1, h2, h3, h4, h5, h6 {
         font-family: var(--theme-font);
         font-weight: 800;
-        padding-bottom: 2px;
         margin-top: 0;
         margin-bottom: var(--theme-header-margin);
     }
@@ -102,6 +105,11 @@ body {
         margin-bottom: var(--theme-text-margin);
         font-family: var(--theme-font);
         line-height: 1.3em;
+    }
+    ul {
+        margin-top: 0;
+        margin-bottom: var(--theme-text-margin);
+        padding-left: 1.5rem;
     }
     li {
         color: var(--theme-text-color);
@@ -137,5 +145,17 @@ body {
     .music__tierlist__right {
         padding-left: 1em;
         border-left: solid thin var(--theme-border-color);
+    }
+}
+@media screen and (max-width: 900px) {
+    .music__tierlist__columns {
+        grid-template-columns: 100%;
+
+        .music__tierlist__left {
+            padding-right: 0;
+        }
+        .music__tierlist__right {
+            display: none;
+        }
     }
 }
